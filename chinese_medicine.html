@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>中医作业</title>
+</head>
+
+
+%latex -article的不典型模版
+
+\documentclass[11pt]{ctexart} 
+%\twocolumn  %分栏，可以有两栏或者一栏
+\usepackage[margin = 1in]{geometry} %调整边距
+%\usepackage[UTF8]{ctex} %引入中文字符
+\usepackage{color} %引入颜色
+\usepackage{graphicx}%图片包
+\usepackage{subfigure}%次级图片包
+%\graphicspath{{/Users/wangzhikun/Desktop/学习资料/LaTeX/figures/},{}} 指定图片的路径
+
+
+\usepackage{booktabs}%粗线表格
+\usepackage{tabularx}
+
+%自定义\maketitle
+\usepackage{authblk} %加附属机构的宏包
+\title{中医作业}
+\author[1]{Zhikun Wang\thanks{Address for correspondence: Zhikun Wang, Peking University Aerospace Clinical College of Medicine, Peking University, Beijing 100049, China E-Mail: wangzhikun@pku.edu.cn}}
+\affil[1]{Students:1610122916, Peking University Aerospace Clinical College of Medicine, \linebreak Peking University, Beijing 100049, China}
+\renewcommand*{\Affilfont}{\small\it} % 修改机构名称的字体与大小
+% \renewcommand\Authands{ and } % 去掉 and 前的逗号
+\date{} %日期可以空白
+
+%调整行间距和段间距
+\linespread{1.5} %设置行间距，1.5是字体的1.5倍
+\setlength{\parskip}{1.5ex} %设置段落间距
+
+
+%自定义页脚页眉
+\usepackage{lastpage}%总页数的宏包
+\usepackage{fancyhdr}
+\pagestyle{fancy}%
+\fancyhf{}%清空页脚页眉
+% \rhead{\leftmark}
+\cfoot{Page \thepage\ of \pageref{LastPage}} %页脚的中间位置
+% 自定义页眉线的宽度，需要宏包
+\renewcommand{\headrulewidth}{0pt} %自定义页眉线的宽度
+% \renewcommand{\footrulewidth}{0.4pt} %自定义页脚线的宽度
+
+
+
+%自定义标题样式，需要宏包
+\usepackage{titlesec} %改变标题的样式
+
+%section的样式 
+%\titleformat{hcommandi}[hshapei]{hformati}{hlabel i}{hsepi}{hbefore-codei}[hafter-codei]
+\titleformat{\section}%command，设置格式
+{\Large\bf}%format，\raggedright左对齐（左右相反）会取消space的设置，4号字，加粗
+{\S\thesection.\,}%lable，标题的序号+‘.’ \.是空格,可以在这里设置标题颜色
+{0.24em}%这是sep，定义的是label和title之间的水平距离 0.24em是经验值
+{}%标题之前没有内容
+[]%可选，标题之后没有内容
+
+%section的上下距离
+%\titlespacing*{hcommandi}{hlefti}{hbefore-sepi}{hafter-sepi}[h
+\titlespacing{\section}%设置上下距离
+{0cm} %编号之前的缩进 
+{*1.5} 
+{*1.1}
+
+%subsection样式
+\titleformat{\subsection}%command，设置格式
+{\large\bf}%format，左对齐（左右相反），4号字，加粗
+{\thesubsection.\,}%lable，标题的序号+‘.’ \.是空格
+{0.24em}%这是sep，定义的是label和title之间的水平距离 0.24em是经验值
+{}%标题之前没有内容
+[]%可选，标题之后没有内容
+
+%subsection的上下距离
+\titlespacing{\subsection}%设置缩进
+{0.5cm} %编号之前的缩进
+{*1.5} 
+{*1.1}
+
+%subsubsection样式
+\titleformat{\subsubsection}%command，设置格式
+{\large\bf}%format，左对齐（左右相反），4号字，加粗
+{\thesubsubsection.\,}%lable，标题的序号+‘.’ \.是空格
+{0.24em}%这是sep，定义的是label和title之间的水平距离 0.24em是经验值
+{}%标题之前没有内容
+[]%可选，标题之后没有内容
+
+%subsubsection的上下距离
+\titlespacing{\subsubsection}%设置缩进
+{1cm} %编号之前的缩进 
+{*1.5} 
+{*1.1}
+
+
+
+
+%正文终于开始了
+\begin{document}
+\maketitle
+\thispagestyle{fancy}%第一页也用fancy定义的页眉
+% \thispagestyle{haha}
+
+\section{论述经脉循行与气机升降的关系}
+气的升降出入联系全身，经脉不仅是气沟通五脏六腑的通道，其循行方向与所对应脏腑的气机
+升降方向也是一致的，
+即足三阴、手三阳经脉从低走高为升，其气机运动也是上升方向；足三阳、手三阴从高走低为降，其气机升降方向也是下降。气机运动有升降出入的变化，经脉循行有向上向下的不同，因此{\bf 经脉循行的路线即是对应脏腑的气机升降之路，经脉循行方向为气机升降方向，二者一体两面，是一个事物从不同角度观察的结果}\cite{2019}。
+诸升者，统于脾，以脾主升；诸降者，统于胃，因胃主降。肝经上行，肝气以升发为顺，因此肝气上逆的说法是不合气机升降理论的。足三阳经别是胃、胆、膀胱三经之气上行至头的通道。
+
+足三阳经在经脉主体中经气依气机升降规律下降的同时，别有经脉中轻清精微之气循其经别上行至躯干、头颈部。即《灵枢·经别》称经别是“{\it 别行之正经}”。
+
+将气机升降与经络学说结合为一，突出了脾胃作为气机升降枢轴的重要性，为临床广泛应用脾胃经穴提供了新思路。
+
+\section{分析艾灸治疗痛证的机理}
+如图\ref{艾炙} 所示。\cite{zhang}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{艾炙.png}
+	\caption{分析艾灸治疗痛证的机理}
+	\label{艾炙}
+\end{figure}
+
+\section{论述热敏通道的门控调节与功能}
+门控通道具体的调节如图\ref{热敏} 和 表\ref{热敏2} 所示。\cite{2012}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\linewidth]{热敏}
+	\caption{6个热敏通道的示意图以及激动剂。每个亚基由6个跨膜结构域(S1-S6)、一个连接跨膜结构域S5和S6的疏水孔环以及大的细胞质中的n-和c-末端组成。 所有的热释电位点在n-端都有一个可变的锚蛋白重复结构域(TRPM8除外，它没有)。 热阈值从很热(TRPV2)到冷(TRPA1)。除了热激发，每个TRP也被特定的物质激活，这些物质能诱发人类热感和痛感，这些物质被画在图上}
+	\label{热敏}
+\end{figure}
+
+
+
+
+\begin{table}[htbp]
+\centering
+% \setlength{\tabcolsep}{1.5mm}{表格内容} %调整表格宽度,套在table或tabular外
+% \resizebox{\textwidth}{12mm}{表格内容} %调整表格高度,套在table或tabular外
+% \toprule[2pt], \bottomrule[2pt], \midrule[1pt]分别为三处横线，适合科学文献排版
+\begin{tabularx}{18cm}{p{40pt}p{50pt}XX}
+\toprule
+
+Channel&Temperature sensitivity&\quad Non‐thermal agonists&Function\\\midrule
+TRPV1&≥42°C&Capsaicin, low pH, ethanol, anadamide, NADA, 12‐HPETE, camphor, resiniferatoxin, allicin, 2‐APB, lidocaine, gingerol, shogaol, piperine monoacylglycerols, ω‐3 fatty acids, membrane stretch&Noxious heat sensor; also involved in inlammatory pain, thermal hyperalgesia, hippocampal long‐term depression, diabetes, obesity, bladder function, hypertension, gastrointestinitis, hypothermia, renal excretory function.\\[50pt]
+
+TRPV2&≥52°C&2‐APB, cannabidiol, membrane stretch&Possible extreme heat sensor ; innate immune system\\[50pt]
+
+TRPV3&32°C∼39°C&2‐APB, camphor, carvacrol (from oregano), incensole acetate, thymol, eugenol&Warmth; possible involvement in noxious heat detection\\[50pt]
+
+TRPV4&27°C∼34°C&Membrane stretch, phorbol ester, 5,6‐EET, anandamide, arachidonic acid, BAA&Warm temperature sensation and volume regulation; possible involvement in noxious mechanical pain and thermal hyperalgesia\\[70pt]
+
+TRPM8&25°C∼34°C&Menthol, icilin, eucalyptol&Innocuous cold perception, behavioural thermoregulation, cold‐mediated analgesia; cold nociception in some neurons\\[50pt]
+
+TRPA1&≤17°C&Cinnamaldehyde, acrolein, chlorine, ROS, formalin, fatty acids, mustard oil, allicin, icilin, gingerol, prostanoids, NSAIDs, isoflurane, propofol, etomidate, dihydropyridines, clotrimazole, nicotine, menthol&Cold, mechanical and chemically induced nociception, cold hyperalgesia\\
+
+\bottomrule
+\end{tabularx}
+\caption{热敏通道的调节和功能} %可选标题
+\label{热敏2} %引用标记
+\end{table}
+
+
+
+
+
+
+\begin{thebibliography} {99}
+\bibitem{2019}王灿, 蔡玉梅, 张雨帆, et al. 经脉循行与气机升降的关系探讨 [J]. 亚太传统医药, 2019, 15(01): 76-7.
+\bibitem{1996}杨华元, 刘堂义. 艾灸疗法的生物物理机制初探[J]. 中国针灸, 1996(10):17-18+59.
+\bibitem{zhang}张峻峰. 艾灸疗法作用机理的现代医学研究进展[C]// 皇甫谧故里拜祖大典暨针灸甲乙经学术思想国际研讨会. 0.
+\bibitem{2012}Vay L , Gu C , Mcnaughton P A . The thermo‐TRP ion channel family: properties and therapeutic implications[J]. British Journal of Pharmacology, 2012, 165(4).
+\end{thebibliography}
+
+\end{document}
+
+
+</body>
+</html>
